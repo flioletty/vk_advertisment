@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "smokescreen/*": ["libs/smokescreen/*"]
+    }
+  }
+}
