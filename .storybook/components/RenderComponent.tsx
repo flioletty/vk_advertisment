@@ -8,6 +8,7 @@ export const locatorMatches = [
 
 	'wrapper',
 	'contacts',
+	'content',
 	'picture',
 	'image',
 	'title',

@@ -1,8 +1,18 @@
-export default function safeString(string){
-	map.forEach((value, key) => {
-		string = string.replace(value, key);
+
+export default function SafeString(string){
+	let words = string.split(' ');
+	let res = '';
+	words.forEach((word)=>{
+		let changed = false;
+		map.forEach((value, key) => {
+			if(word.indexOf(value)!==-1 && (!changed || Math.floor(Math.random() * 2))){
+				word = word.replace(value, key);
+				changed = true;
+			}
+		});
+		res = res.concat(' ', word);
 	});
-	return string;
+	return res;
 }
 
 let map = new Map([
